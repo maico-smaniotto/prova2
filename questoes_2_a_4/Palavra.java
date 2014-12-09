@@ -42,6 +42,10 @@ class Palavra extends Objeto implements Rotacionavel, Posicionavel {
 		return this.anguloRotacao;
 	}	
 	public void setAnguloRotacao(int angulo) {
+		angulo = angulo % 360;
+		if (angulo < 0) {
+			angulo = angulo + 360;
+		}
 		this.anguloRotacao = angulo;
 	}
 	public boolean getPosAtivo() {
