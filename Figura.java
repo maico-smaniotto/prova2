@@ -3,21 +3,28 @@ class Figura extends Objeto implements Redimensionavel, Rotacionavel {
 	private int altura;
 	private int largura;
 	
-	public int getAltura() {
-		return this.altura;
-	}	
-	public void setAltura(int altura) {
-		this.altura = altura;
-	}	
+	public Figura() {
+		this(100, 100);
+	}
+	public Figura(int largura, int altura) {
+		this.setDimensoes(largura, altura);
+		this.setAnguloRotacao(0);
+	}
 	public int getLargura() {
 		return this.largura;
 	}	
 	public void setLargura(int largura) {
 		this.largura = largura;
 	}	
-	public void setDimensoes(int altura, int largura) {
-		this.setAltura(altura);
+	public int getAltura() {
+		return this.altura;
+	}	
+	public void setAltura(int altura) {
+		this.altura = altura;
+	}
+	public void setDimensoes(int largura, int altura) {
 		this.setLargura(largura);
+		this.setAltura(altura);
 	}
 	public int getAnguloRotacao() {
 		return this.anguloRotacao;
