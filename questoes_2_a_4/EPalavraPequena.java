@@ -1,0 +1,3 @@
+class EPalavraPequena extends Exception {
+
+}

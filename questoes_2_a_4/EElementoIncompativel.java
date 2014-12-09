@@ -1,0 +1,3 @@
+class EElementoIncompativel extends Exception {
+
+}
